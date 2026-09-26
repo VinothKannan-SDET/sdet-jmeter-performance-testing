@@ -25,15 +25,25 @@ jobs:
           wget https://dlcdn.apache.org/jmeter/binaries/apache-jmeter-5.6.3.tgz
           tar -xzf apache-jmeter-5.6.3.tgz
 
-      - name: Run JMeter test and generate HTML report
+      - name: Run JMeter test
         run: |
           mkdir -p results
+
           ./apache-jmeter-5.6.3/bin/jmeter \
             -n \
             -t test-plans/booking-api-assertions-reporting.jmx \
-            -l results/jmeter-results.jtl \
-            -e \
+            -l results/jmeter-results.jtl
+
+      - name: Generate JMeter HTML report
+        run: |
+          rm -rf results/jmeter-html-report
+
+          ./apache-jmeter-5.6.3/bin/jmeter \
+            -g results/jmeter-results.jtl \
             -o results/jmeter-html-report
+
+          echo "Generated report files:"
+          find results/jmeter-html-report -maxdepth 2 -type f | head -30
 
       - name: Upload JMeter HTML report
         if: always()
