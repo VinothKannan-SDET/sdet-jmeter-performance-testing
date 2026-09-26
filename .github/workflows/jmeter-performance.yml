@@ -25,6 +25,19 @@ jobs:
           wget https://dlcdn.apache.org/jmeter/binaries/apache-jmeter-5.6.3.tgz
           tar -xzf apache-jmeter-5.6.3.tgz
 
+      - name: Verify test data
+        run: |
+          echo "Current directory:"
+          pwd
+
+          echo "Project files:"
+          ls -la
+
+          echo "Test data:"
+          ls -la test-data
+
+          test -f test-data/booking-data.csv
+
       - name: Run JMeter test
         run: |
           mkdir -p results
@@ -34,6 +47,12 @@ jobs:
             -t test-plans/booking-api-assertions-reporting.jmx \
             -l results/jmeter-results.jtl
 
+          echo "JTL size:"
+          ls -lh results/jmeter-results.jtl
+
+          echo "JTL lines:"
+          wc -l results/jmeter-results.jtl
+
       - name: Generate JMeter HTML report
         run: |
           rm -rf results/jmeter-html-report
@@ -42,8 +61,8 @@ jobs:
             -g results/jmeter-results.jtl \
             -o results/jmeter-html-report
 
-          echo "Generated report files:"
-          find results/jmeter-html-report -maxdepth 2 -type f | head -30
+          echo "HTML report generated:"
+          ls -la results/jmeter-html-report
 
       - name: Upload JMeter HTML report
         if: always()

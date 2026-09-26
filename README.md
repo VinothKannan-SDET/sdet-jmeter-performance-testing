@@ -1,3 +1,8 @@
+![JMeter Performance Test](https://github.com/VinothKannan-SDET/sdet-jmeter-performance-testing/actions/workflows/jmeter-performance.yml/badge.svg)
+
+## Repository
+[GitHub Repository](https://github.com/VinothKannan-SDET/sdet-jmeter-performance-testing)
+
 # JMeter Performance Testing — Restful Booker API
 
 ## Overview
