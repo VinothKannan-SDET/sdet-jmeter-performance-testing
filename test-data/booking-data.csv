@@ -1,0 +1,6 @@
+firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+Performance-A,Test,150,true,2026-09-24,2026-09-30,Breakfast
+Performance-B,Test,200,false,2026-10-01,2026-10-05,Lunch
+Performance-C,Test,250,true,2026-10-06,2026-10-10,Dinner
+Performance-D,Test,300,true,2026-10-11,2026-10-15,Breakfast
+Performance-E,Test,350,false,2026-10-16,2026-10-20,Lunch

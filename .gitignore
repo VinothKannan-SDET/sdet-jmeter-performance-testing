@@ -1,0 +1,23 @@
+# JMeter generated files
+jmeter.log
+*.log
+
+# Results - keep HTML report, ignore raw jtl if large
+results/*.jtl
+results/*-html-report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Environment
+.env
