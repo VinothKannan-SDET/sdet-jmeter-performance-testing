@@ -68,6 +68,6 @@ jmeter -n -t test-plans/booking-api-load-stress-test.jmx -l results/results.jtl 
 jmeter -g results/results.jtl -o results/html-report
 
 ## Results
-- Day 5 HTML Report: `results/day-5-html-report/index.html`
-- Day 5 JTL Results: `results/day-5-results.jtl`
-- Stress Test Summary: `docs/day-6-load-stress-results.md`
+- Day 5 performance results and analysis: `docs/day-5-performance-results.md`
+- Day 6 load/stress analysis: `docs/day-6-load-stress-results.md`
+- JMeter HTML reports are generated automatically by GitHub Actions and available as workflow artifacts.

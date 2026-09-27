@@ -24,9 +24,11 @@ Evaluate application behavior as concurrent users increase.
 | Error Rate 			| < 1% 			| 0.00% 			  | ✅ PASS |
 | Throughput 			| > 10 req/sec 	| 17.5/sec 			  | ✅ PASS |
 
-**Conclusion:** The API meets all acceptance criteria up to
-150 concurrent users. Criteria breached at 200 users
-(Error Rate = 1.93% exceeds < 1% threshold).
+**Conclusion:** The API met all predefined acceptance criteria in the 150-user test.
+The 200-user run exceeded the error-rate threshold with 1.93% errors.
+The subsequent 300-user run showed 0.44% errors, so these results do not establish
+a definitive breaking point. A controlled rerun with server-side monitoring would
+be required for capacity conclusions.
 
 ## Observations
 
