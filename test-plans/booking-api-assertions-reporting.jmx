@@ -21,7 +21,7 @@
       </ThreadGroup>
       <hashTree>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">C:/Vinoth/SDET-Course-Project/SDET-JMeter-Performance-Testing/test-data/booking-data.csv</stringProp>
+          <stringProp name="filename">test-data/booking-data.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="variableNames">firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
